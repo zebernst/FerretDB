@@ -41,7 +41,7 @@ func (ready *ReadyZ) Probe(ctx context.Context) bool {
 	l := ready.l
 
 	if cli.Setup.Database == "" {
-		l.InfoContext(ctx, "Setup database not specified - skipping ping")
+		l.DebugContext(ctx, "Setup database not specified - skipping ping")
 		return true
 	}
 
